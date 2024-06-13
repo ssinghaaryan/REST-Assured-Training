@@ -1,0 +1,54 @@
+{
+    "$schema": "http://json-schema.org/draft-06/schema#",
+    "$ref": "#/definitions/Welcome10",
+    "definitions": {
+        "Welcome10": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "student": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/Student"
+                    }
+                }
+            },
+            "required": [
+                "student"
+            ],
+            "title": "Welcome10"
+        },
+        "Student": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "id": {
+                    "type": "integer"
+                },
+                "name": {
+                    "type": "string"
+                },
+                "location": {
+                    "type": "string"
+                },
+                "phone": {
+                    "type": "string"
+                },
+                "courses": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                }
+            },
+            "required": [
+                "courses",
+                "id",
+                "location",
+                "name",
+                "phone"
+            ],
+            "title": "Student"
+        }
+    }
+}

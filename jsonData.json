@@ -1,0 +1,10 @@
+
+  {
+    "name": "Daniel",
+    "location": "delhi",
+    "phone": "4444",
+    "courses": [
+      "Python",
+      "Rust"
+    ]
+  }
