@@ -34,7 +34,7 @@ public class HTTPRequests {
 			hm.put("name", "tester");
 			hm.put("job", "qa");
 			
-			userId = given()
+			userId = given() // userId declared globally above.
 				.contentType("application/json")
 				.body(hm)
 			

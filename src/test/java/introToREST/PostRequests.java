@@ -77,12 +77,12 @@ public class PostRequests {
 			.log().all();
 	}
 	
-	// 3. POST request using POJO
+	// 3. POST request using POJO class.
 	
 //	@Test(priority = 1)
 	void postUsingPOJO() {
 		
-		POJOPostRequest data = new POJOPostRequest();
+		POJOPostRequest data = new POJOPostRequest(); // Creating object of the POJO class for using the setter and getters.
 		
 		data.setName("Daniel");
 		data.setLocation("delhi");
@@ -113,13 +113,14 @@ public class PostRequests {
 	@Test(priority = 1)
 	void postUsingExternalJSONFile() throws FileNotFoundException {
 		
-		File f = new File("./jsonData.json");
+		File f = new File("./jsonData.json"); // To access the file. Provided by Java itself.
 		
-		FileReader fr = new FileReader(f);
+		FileReader fr = new FileReader(f); // To read the data from file, as name suggests. Provided by Java.
 		
-		JSONTokener jt = new JSONTokener(fr);
+		JSONTokener jt = new JSONTokener(fr); // Takes a source string and extracts characters and tokens from it.
+											  // It is used by JSONObject and JSONArray to parse JSON string.
 		
-		JSONObject data = new JSONObject(jt);
+		JSONObject data = new JSONObject(jt); // Extracting data in form of JSON object.
 		
 		given()
 			.contentType("application/json")

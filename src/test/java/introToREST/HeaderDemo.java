@@ -23,7 +23,7 @@ public class HeaderDemo {
 
 		.then()
 			.header("Content-Type", "text/html; charset=ISO-8859-1")
-			.and()
+			.and() // Not necessary to add this add() method.
 			.header("Content-Encoding", "gzip")
 			.and()
 			.header("Server", "gws");

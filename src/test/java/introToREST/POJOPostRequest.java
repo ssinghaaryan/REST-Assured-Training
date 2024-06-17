@@ -1,5 +1,6 @@
 package introToREST;
 
+// This is the POJO class defined to be used for the POJO Post Request through getters and setters.
 public class POJOPostRequest {
 	
 	String location;
